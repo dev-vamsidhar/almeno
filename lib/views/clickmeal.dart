@@ -1,8 +1,6 @@
 import 'package:alemenotest/views/sharemeal.dart';
 import 'package:camera/camera.dart';
-import 'package:camerawesome/camerawesome_plugin.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
