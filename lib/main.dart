@@ -1,10 +1,15 @@
 import 'package:alemenotest/views/home.dart';
-import 'package:alemenotest/views/thankyou.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:get/get.dart';
 
 void main() {
   runApp(const MyApp());
+  EasyLoading.instance
+    ..indicatorType = EasyLoadingIndicatorType.circle
+    ..loadingStyle = EasyLoadingStyle.light
+    ..indicatorSize = 45.0
+    ..radius = 10.0;
 }
 
 class MyApp extends StatelessWidget {
@@ -15,6 +20,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
         title: 'Almeno',
+        builder: EasyLoading.init(),
         theme: ThemeData(
           primarySwatch: Colors.blue,
         ),

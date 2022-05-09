@@ -28,6 +28,7 @@ environment:
 # versions available, run `flutter pub outdated`.
 dependencies:
   camera: ^0.9.4+21
+  camerawesome: ^0.3.0+1
   cupertino_icons: ^1.0.2
   flutter:
     sdk: flutter
