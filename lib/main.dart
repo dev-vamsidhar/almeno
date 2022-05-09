@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
-        title: 'Almeno',
+        title: 'Vamsidhar',
         builder: EasyLoading.init(),
         theme: ThemeData(
           primarySwatch: Colors.blue,
