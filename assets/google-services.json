@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "816196302194",
+    "project_id": "almeno-10da1",
+    "storage_bucket": "almeno-10da1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:816196302194:android:6d16d72007813b1ceb59eb",
+        "android_client_info": {
+          "package_name": "com.example.alemenotest"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "816196302194-50iac2fmut12ne3v76a83uj0fdtej7qp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB9Xvg47mC8nMbpotFChnUBe34Lx87WIzY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "816196302194-50iac2fmut12ne3v76a83uj0fdtej7qp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

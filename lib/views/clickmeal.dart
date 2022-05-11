@@ -66,9 +66,18 @@ class _ClickMealState extends State<ClickMeal> {
             ),
           ),
           Center(
-            child: Padding(
-              padding: const EdgeInsets.all(10.0),
-              child: Image.asset("assets/animal.png"),
+            child: Container(
+              height: 80,
+              width: 80,
+              child: Center(
+                child: Padding(
+                  padding: const EdgeInsets.all(10.0),
+                  child: Image.asset(
+                    "assets/animal.png",
+                    fit: BoxFit.fill,
+                  ),
+                ),
+              ),
             ),
           ),
           const Spacer(),

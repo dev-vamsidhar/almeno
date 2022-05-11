@@ -1,5 +1,6 @@
 import 'dart:io';
 
+import 'package:alemenotest/controllers/images.controller.dart';
 import 'package:alemenotest/views/thankyou.dart';
 import 'package:camera/camera.dart';
 import 'package:flutter/material.dart';
@@ -9,7 +10,7 @@ import 'package:google_fonts/google_fonts.dart';
 class ShareMeal extends StatelessWidget {
   String path = "";
   ShareMeal({Key? key, required this.path}) : super(key: key);
-
+  ImageController imageController = Get.put(ImageController());
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -35,12 +36,24 @@ class ShareMeal extends StatelessWidget {
               ),
             ),
           ),
-          Center(
-            child: Padding(
-              padding: const EdgeInsets.all(10.0),
-              child: Image.asset("assets/animal.png"),
-            ),
-          ),
+          GetBuilder<ImageController>(builder: (_) {
+            return Center(
+              child: AnimatedContainer(
+                width: imageController.width,
+                height: imageController.height,
+                duration: const Duration(seconds: 3),
+                child: Center(
+                  child: Padding(
+                    padding: const EdgeInsets.all(10.0),
+                    child: Image.asset(
+                      "assets/animal.png",
+                      fit: BoxFit.cover,
+                    ),
+                  ),
+                ),
+              ),
+            );
+          }),
           const Spacer(),
           Container(
             decoration: const BoxDecoration(
@@ -78,7 +91,10 @@ class ShareMeal extends StatelessWidget {
               ),
               InkWell(
                 onTap: () async {
-                  Get.to(ThankYou());
+                  imageController.width = 150;
+                  imageController.height = 150;
+                  imageController.update();
+                  await ImageController().uploadSharedMeal(File(path));
                 },
                 child: Padding(
                   padding: const EdgeInsets.all(12.0),

@@ -29,9 +29,14 @@ environment:
 dependencies:
   camera: ^0.9.4+21
   cupertino_icons: ^1.0.2
+  firebase_auth: ^3.3.17
+  firebase_core: ^1.16.0
+  firebase_messaging: ^11.3.0
+  firebase_storage: ^10.2.15
   flutter:
     sdk: flutter
   flutter_easyloading: ^3.0.3
+  flutter_local_notifications: ^9.5.2
   get: ^4.6.1
   google_fonts: ^2.3.2
 
