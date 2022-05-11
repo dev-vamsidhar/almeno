@@ -16,7 +16,7 @@ class Home extends StatelessWidget {
             Center(
               child: InkWell(
                 onTap: () {
-                  Get.to(ClickMeal());
+                  Get.to(const ClickMeal());
                 },
                 child: Container(
                   width: 229,

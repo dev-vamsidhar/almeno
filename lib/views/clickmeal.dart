@@ -21,7 +21,7 @@ class _ClickMealState extends State<ClickMeal> {
     super.initState();
 
     controller = CameraController(
-        CameraDescription(
+       const CameraDescription(
             name: "0",
             lensDirection: CameraLensDirection.back,
             sensorOrientation: 0),
@@ -66,7 +66,7 @@ class _ClickMealState extends State<ClickMeal> {
             ),
           ),
           Center(
-            child: Container(
+            child: SizedBox(
               height: 80,
               width: 80,
               child: Center(
@@ -99,7 +99,7 @@ class _ClickMealState extends State<ClickMeal> {
                       Stack(
                         alignment: Alignment.center,
                         children: [
-                          Container(
+                          SizedBox(
                               height: 180,
                               width: 180,
                               // decoration: BoxDecoration(
@@ -108,7 +108,7 @@ class _ClickMealState extends State<ClickMeal> {
                               child: ClipRRect(
                                   borderRadius: BorderRadius.circular(200),
                                   child: CameraPreview(controller))),
-                          Container(
+                          SizedBox(
                             width: 200,
                             height: 200,
                             child: Column(
@@ -162,7 +162,7 @@ class _ClickMealState extends State<ClickMeal> {
                   controller.setFlashMode(FlashMode.off);
                   EasyLoading.show(status: "");
                   XFile imagefile = await controller.takePicture();
-                  print(imagefile.path);
+                 
                   EasyLoading.dismiss();
                   Get.to(ShareMeal(path: imagefile.path));
                 },

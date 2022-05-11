@@ -1,12 +1,11 @@
 import 'dart:io';
 
 import 'package:alemenotest/controllers/images.controller.dart';
-import 'package:alemenotest/views/thankyou.dart';
-import 'package:camera/camera.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+// ignore: must_be_immutable
 class ShareMeal extends StatelessWidget {
   String path = "";
   ShareMeal({Key? key, required this.path}) : super(key: key);
@@ -68,7 +67,7 @@ class ShareMeal extends StatelessWidget {
                     const EdgeInsets.all(17.0) + const EdgeInsets.only(top: 50),
                 child:
                     Row(mainAxisAlignment: MainAxisAlignment.center, children: [
-                  Container(
+                  SizedBox(
                     height: 200,
                     width: 200,
                     child: ClipRRect(
@@ -110,7 +109,7 @@ class ShareMeal extends StatelessWidget {
                   ),
                 ),
               ),
-              SizedBox(
+             const SizedBox(
                 height: 20,
               )
             ]),
